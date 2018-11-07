@@ -5,3 +5,7 @@ body{
   border: solid white 2px;
 
 }
+.city{
+  display: flex;
+  justify-content: space-between;
+}

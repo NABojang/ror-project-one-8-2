@@ -23,9 +23,17 @@ class CitiesController < ApplicationController
   # POST /countries
   # POST /countries.json
   def create
-    @country = Country.find(params[:user_id])
-    @city = @country.cities.create(city_params)
-    redirect_to country_path(@country)
+    @city = City.new(city_params)
+
+    respond_to do |format|
+      if @city.save
+        format.html { redirect_to @city, notice: 'City was successfully created.' }
+        format.json { render :show, status: :created, location: @city }
+      else
+        format.html { render :new }
+        format.json { render json: @city.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   # PATCH/PUT /countries/1
