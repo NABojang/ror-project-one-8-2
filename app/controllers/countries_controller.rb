@@ -20,6 +20,7 @@ before_action :authenticate_user!
 
   # GET /countries/1/edit
   def edit
+      @country = Country.find(params[:id])
   end
 
   # POST /countries
