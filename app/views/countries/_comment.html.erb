@@ -1,0 +1,11 @@
+<h3>Cities</h3>
+<% @country.cities.each do |city| %>
+  <div class="well">
+    <p><strong><%= city.name %></strong>:
+      <%= city.population %>
+        <%= city.desciption %>
+      <%= link_to '[X]', [city.country, city], method: :delete,
+      data: {confirm: "Are you sure?"} %>
+    </p>
+  </div>
+<% end %>

@@ -17,12 +17,30 @@
   <%= @country.location %>
 </p>
 
-<img src="" alt="">
 
-<%= link_to 'city ', cities_path %>
+
 <br>
 <hr>
-
 <%= link_to 'Edit', edit_country_path(@country) %>
-<br>
+<hr>
 <%= link_to 'Back', countries_path %>
+<hr>
+
+<h2>Cities</h2>
+
+<h2>
+
+</h2>
+
+<tbody>
+  <% @country.cities.each do |city| %>
+    <tr>
+      <td><%= city.name %></td>
+      <td><%= city.population %></td>
+      <td><%= city.desciption %></td>
+      <td><%= link_to 'Show', city %></td>
+      <td><%= link_to 'Edit', edit_city_path(city) %></td>
+      <td><%= link_to 'Destroy', city, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</tbody>
