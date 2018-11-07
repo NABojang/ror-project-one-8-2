@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    @users = User.all
+    @countries = current_user.all
   end
 
   # GET /users/1
@@ -14,7 +14,7 @@ class UsersController < ApplicationController
 
   # GET /users/new
   def new
-    @user = User.new
+  @country = current_user.countries.build
   end
 
   # GET /users/1/edit
