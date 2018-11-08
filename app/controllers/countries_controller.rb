@@ -10,7 +10,9 @@ before_action :authenticate_user!
   # GET /countries/1
   # GET /countries/1.json
   def show
-    @country = Country.find(params[:id])
+  @country = Country.find(params[:id])
+  @cities = City.where(country_id: @country.id)
+
   end
 
   # GET /countries/new
