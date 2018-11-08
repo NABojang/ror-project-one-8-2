@@ -1,59 +1,59 @@
 <link rel="stylesheet" href="/master.css">
 
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @country.name %>
-</p>
-<p>
-  <strong>Capital:</strong>
-  <%= @country.capital %>
-</p>
-<p>
-  <strong>Location:</strong>
-  <%= @country.location %>
-</p>
-<p>
-  <strong>User id:</strong>
-  <%= @country.user_id %>
-</p>
-<hr>
-<%= link_to 'Edit', edit_country_path(@country) %>
-<hr>
-<%= link_to 'Back', countries_path %>
-<hr>
-
-<h2>Cities</h2>
-  <table class="city">
-    <thead>
-      <tr>
-
-        <th>Name</th>
-        <th>Population</th>
-        <th>Country id</th>
-        <th>Description</th>
-        <th colspan="3"></th>
-
-      </tr>
-    </thead>
-
-    <tbody>
-      <% @cities.each do |city| %>
-        <tr>
-          <td><%= city.name %></td>
-          <td><%= city.population %></td>
-          <td><%= city.country_id %></td>
-          <td><%= city.desciption %></td>
-
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
+<body>
 
 
-<hr>
-<%= link_to 'Edit', edit_country_path(@country) %>
+      <p>
+        <strong>Name:</strong>
+        <%= @country.name %>
+      </p>
+      <p>
+        <strong>Capital:</strong>
+        <%= @country.capital %>
+      </p>
+      <p>
+        <strong>Location:</strong>
+        <%= @country.location %>
+      </p>
+      <p>
+        <strong>User id:</strong>
+        <%= @country.user_id %>
+      </p>
+      <hr>
+      <%= link_to 'Edit', edit_country_path(@country) %>
+
+      <h2>Cities</h2>
+        <table class="city">
+          <thead>
+            <tr>
+
+              <th>Name</th>
+              <th>Population</th>
+              <th>Country id</th>
+              <th>Description</th>
+              <th colspan="3"></th>
+
+            </tr>
+          </thead>
+
+          <tbody>
+            <% @cities.each do |city| %>
+              <tr>
+                <td><%= city.name %></td>
+                <td><%= city.population %></td>
+                <td><%= city.country_id %></td>
+                <td><%= city.desciption %></td>
+                <td><%= link_to 'Show', city %></td>
+                <td><%= link_to 'Edit', edit_city_path(city) %></td>
+                <td><%= link_to 'Destroy', city, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+
+</body>
+
 <hr>
 <%= link_to 'Add New City', new_city_path %>
 <%= link_to 'Back', countries_path %>

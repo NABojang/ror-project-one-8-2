@@ -1,30 +1,46 @@
-body{
-  background-color: ;
-}
+table {
+    /* border: 2px solid white; */
+    /* box-shadow: 2px 2px 5px black; */
+    width: 600px;
+    height: 50px;
+    margin-left: 5%;
+    font-size: 12pt;
+    color: white;
 
-#navv{
-  display: flex;
-  /* align-items: center; */
-  box-shadow: 2px 2px 5px black;
-  border: 2px white solid;
-  border-radius: 15px;
-  background-color:
-  font-size: 10pt
-}
-#newcountry{
-  display: flex;
-  justify-content: center;
-/* margin-top: 10px; */
-border-radius: 5px;
-box-shadow: 2px 2px 5px black;
+
 }
 nav{
   display: flex;
   font-size: 12pt;
-  text-align: center;
+    box-shadow: 2px 2px 3px black;
+    background-color: white;
+    margin-top: 3%;
+    justify-content: space-between;
+    text-align: center;
+  /* text-align: center; */
+  /* justify-content: space-between; */
+}
+body {
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url(https://www.hdwallpapers.in/download/fresh_nature-1280x720.jpg);
+  background-size: cover;
+  font-family: 'Source Sans Pro', sans-serif;
+    /* box-shadow: 2px 2px 5px black; */
 }
 
-img{
-  display: flex;
-  justify-content: space-between;
+header {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  /* text-align: center; */
+}
+
+p, h1,h2{
+  color: white;
 }

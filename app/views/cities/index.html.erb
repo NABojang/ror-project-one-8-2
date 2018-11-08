@@ -1,8 +1,11 @@
 <p id="notice"><%= notice %></p>
 <link rel="stylesheet" href="/master.css">
-<h1>Cities</h1>
 
-<table>
+<body>
+  <h1>Welcome to the cities page.</h1>
+ <header>
+<table class="table table-striped">
+  <table>
   <thead>
     <tr>
       <th>Name</th>
@@ -26,10 +29,12 @@
       </tr>
     <% end %>
   </tbody>
-
 </table>
+</table>
+ </header>
 
 <br>
 
 <button id="newcountry"type="button" name="button"><%= link_to 'New City', new_city_path %></button>
 <button id="newcountry"type="button" name="button"><%= link_to 'Back', countries_path %></button>
+</body>s
