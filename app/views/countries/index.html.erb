@@ -1,36 +1,39 @@
 <p id="notice"><%= notice %></p>
 <link rel="stylesheet" href="/master.css">
+
+
 <h1>Welcome to the countries page.</h1>
-<div class="display">
+<div class="container">
+
+<table class="table table-striped">
+    <table>
+      <thead>
+        <tr>
 
 
-<table>
-  <thead>
-    <tr>
+          <th>Name</th>
+          <th>Capital</th>
+          <th>Location</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
 
+      <tbody>
+        <% @countries.each do |country| %>
+          <tr>
+            <td><%= country.name %></td>
+            <td><%= country.capital %></td>
+            <td><%= country.location %></td>
+            <td><%= link_to 'Show', country %></td>
+            <td><%= link_to 'Edit', edit_country_path(country) %></td>
+            <td><%= link_to 'Destroy', country, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
 
-      <th>Name</th>
-      <th>Capital</th>
-      <th>Location</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @countries.each do |country| %>
-      <tr>
-        <td><%= country.name %></td>
-        <td><%= country.capital %></td>
-        <td><%= country.location %></td>
-        <td><%= link_to 'Show', country %></td>
-        <td><%= link_to 'Edit', edit_country_path(country) %></td>
-        <td><%= link_to 'Destroy', country, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-
-    <% end %>
-  </tbody>
-</table>
-</div>
+        <% end %>
+      </tbody>
+    </table>
+  </table>
+  </div>
 <button id="newcountry"type="button" name="button"><%= link_to 'Add New Country', new_country_path %></button>
 
 <img src="http://wall2born.com/data/out/276/image-51008253-landscape-wallpapers-free.jpg" alt="">

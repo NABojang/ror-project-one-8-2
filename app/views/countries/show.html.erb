@@ -14,7 +14,10 @@
   <strong>Location:</strong>
   <%= @country.location %>
 </p>
-
+<p>
+  <strong>User id:</strong>
+  <%= @country.user_id %>
+</p>
 <hr>
 <%= link_to 'Edit', edit_country_path(@country) %>
 <hr>
@@ -22,23 +25,25 @@
 <hr>
 
 <h2>Cities</h2>
-  <table>
+  <table class="city">
     <thead>
       <tr>
-        <div class="city">
+
         <th>Name</th>
         <th>Population</th>
+        <th>Country id</th>
         <th>Description</th>
         <th colspan="3"></th>
-        </div>
+        
       </tr>
     </thead>
 
     <tbody>
-      <% @country.cities.each do |city| %>
+      <% @cities.each do |city| %>
         <tr>
           <td><%= city.name %></td>
           <td><%= city.population %></td>
+          <td><%= city.country_id %></td>
           <td><%= city.desciption %></td>
 
         </tr>

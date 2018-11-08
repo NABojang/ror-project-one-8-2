@@ -1,13 +1,14 @@
 <p id="notice"><%= notice %></p>
 <link rel="stylesheet" href="/master.css">
 <h1>Cities</h1>
-<div class="city">
+
 <table>
   <thead>
     <tr>
       <th>Name</th>
       <th>Population</th>
       <th>Desciption</th>
+      <th>Countr id </th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,15 +19,17 @@
         <td><%= city.name %></td>
         <td><%= city.population %></td>
         <td><%= city.desciption %></td>
+        <td><%= city.country_id %></td>
         <td><%= link_to 'Show', city %></td>
         <td><%= link_to 'Edit', edit_city_path(city) %></td>
         <td><%= link_to 'Destroy', city, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
+
 </table>
 
 <br>
-</div>
+
 <button id="newcountry"type="button" name="button"><%= link_to 'New City', new_city_path %></button>
 <button id="newcountry"type="button" name="button"><%= link_to 'Back', countries_path %></button>

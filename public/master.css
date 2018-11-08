@@ -2,9 +2,10 @@ body{
   background-color: pink;
   background-image: url('background.jpeg');
 }
-.display{
+
+.container{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   /* align-items: center; */
   margin-left: 25%;
 
@@ -17,7 +18,6 @@ body{
   background-color: #7ADFBB;
   color: white;
   font-size: 20pt
-
 }
 .city{
   display: flex;
@@ -35,6 +35,11 @@ body{
   color:white ;
   font-size: 12pt
 }
+
+nav{
+
+}
+
 
 #navv{
   display: flex;
