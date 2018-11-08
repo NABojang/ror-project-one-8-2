@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 <link rel="stylesheet" href="/master.css">
 <h1>Cities</h1>
-
+<div class="city">
 <table>
   <thead>
     <tr>
@@ -27,6 +27,6 @@
 </table>
 
 <br>
-
-<%= link_to 'New City', new_city_path %>
-<%= link_to 'Back', countries_path %>
+</div>
+<button id="newcountry"type="button" name="button"><%= link_to 'New City', new_city_path %></button>
+<button id="newcountry"type="button" name="button"><%= link_to 'Back', countries_path %></button>

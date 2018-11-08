@@ -1,11 +1,54 @@
 body{
   background-color: pink;
+  background-image: url('background.jpeg');
 }
 .display{
-  border: solid white 2px;
+  display: flex;
+  justify-content: space-around;
+  /* align-items: center; */
+  margin-left: 25%;
+
+  box-shadow: 2px 2px 5px black;
+  width: 850px;
+  height: 600px;
+  padding: 100px;
+  border: 2px white solid;
+  border-radius: 15px;
+  background-color: #7ADFBB;
+  color: white;
+  font-size: 20pt
 
 }
 .city{
   display: flex;
   justify-content: space-between;
+  /* align-items: center; */
+  margin-left: 25%;
+
+  box-shadow: 2px 2px 5px black;
+  width: 990px;
+  height: 550px;
+  padding: 100px;
+  border: 2px white solid;
+  border-radius: 15px;
+  background-color: salmon;
+  color:white ;
+  font-size: 12pt
+}
+
+#navv{
+  display: flex;
+  /* align-items: center; */
+  box-shadow: 2px 2px 5px black;
+  border: 2px white solid;
+  border-radius: 15px;
+  background-color: lightgreen;
+  font-size: 10pt
+}
+#newcountry{
+  display: flex;
+  justify-content: center;
+/* margin-top: 10px; */
+border-radius: 5px;
+box-shadow: 2px 2px 5px black;
 }

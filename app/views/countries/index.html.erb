@@ -1,19 +1,21 @@
 <p id="notice"><%= notice %></p>
 <link rel="stylesheet" href="/master.css">
-<h1>Countries</h1>
+<h1>Welcome to the countries page.</h1>
 <div class="display">
 
 
 <table>
   <thead>
     <tr>
+
+
       <th>Name</th>
       <th>Capital</th>
       <th>Location</th>
       <th colspan="3"></th>
     </tr>
   </thead>
-</div>
+
   <tbody>
     <% @countries.each do |country| %>
       <tr>
@@ -24,10 +26,11 @@
         <td><%= link_to 'Edit', edit_country_path(country) %></td>
         <td><%= link_to 'Destroy', country, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
+
     <% end %>
   </tbody>
 </table>
+</div>
+<button id="newcountry"type="button" name="button"><%= link_to 'Add New Country', new_country_path %></button>
 
-
-<hr>
-<%= link_to 'Add New Country', new_country_path %>
+<img src="http://wall2born.com/data/out/276/image-51008253-landscape-wallpapers-free.jpg" alt="">
