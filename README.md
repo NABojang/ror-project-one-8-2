@@ -1,4 +1,7 @@
 # README
+Country Blog
+This app is to help travellers find information about countries, cities and their location. The app can be used to learn about population of countries and capitals
+Struggles I encountered during the project where, assigning each city to a specific country
 
 This README would normally document whatever steps are necessary to get the
 application up and running.

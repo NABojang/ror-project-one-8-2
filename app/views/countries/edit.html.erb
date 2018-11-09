@@ -1,36 +1,33 @@
 <body>
+  <h1>Editing Country</h1>
 
+    <%= form_for :country, url: country_path(@country), method: :patch do |f| %>
+    <% if @country.errors.any? %>
+    <% @country.errors.full_messages.each do |msg| %>
+    <div class="aleart aleart-danger"><%= msg %></div>
+      <% end %>
+    <% end %>
 
-<h1>Editing Country</h1>
+      <div class="field">
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+      </div>
 
+      <div class="field">
+        <%= f.label :capital %>
+        <%= f.text_field :capital %>
+      </div>
 
-<%= form_for :country, url: country_path(@country), method: :patch do |f| %>
-<% if @country.errors.any? %>
-<% @country.errors.full_messages.each do |msg| %>
-<div class="aleart aleart-danger"><%= msg %></div>
-  <% end %>
-<% end %>
+      <div class="field">
+        <%= f.label :location %>
+        <%= f.text_field :location %>
+      </div>
 
-  <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </div>
+      <div class="actions">
+        <%= f.submit %>
+      </div>
+    <% end %>
 
-  <div class="field">
-    <%= f.label :capital %>
-    <%= f.text_field :capital %>
-  </div>
-
-  <div class="field">
-    <%= f.label :location %>
-    <%= f.text_field :location %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
-
-<%= link_to 'Show', @country %> |
-<%= link_to 'Back', countries_path %>
+    <%= link_to 'Show', @country %> |
+    <%= link_to 'Back', countries_path %>
 </body>
