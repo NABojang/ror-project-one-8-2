@@ -2,9 +2,10 @@
 <link rel="stylesheet" href="/master.css">
 
 <body>
-  <h1>Welcome to the cities page.</h1>
+  <h1 align= "center">Welcome to the cities page.</h1>
  <header>
-<table class="table table-striped">
+<div class="table-responsive" align="center">
+  <table class="table table-striped">
   <table>
   <thead>
     <tr>
@@ -20,21 +21,23 @@
     <% @cities.each do |city| %>
       <tr>
         <td><%= city.name %></td>
-        <td><%= city.population %></td>
-        <td><%= city.desciption %></td>
-        <td><%= city.country_id %></td>
-        <td><%= link_to 'Show', city %></td>
-        <td><%= link_to 'Edit', edit_city_path(city) %></td>
-        <td><%= link_to 'Destroy', city, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= city.population %></td><br>
+        <td><%= city.desciption %></td><br>
+        <td><%= city.country_id %></td><br>
+        <td><%= link_to 'Show', city, :class => 'btn btn-primary' %></td>
+        <td><%= link_to 'Edit', edit_city_path(city), :class => 'btn btn-success'  %></td>
+        <td><%= link_to 'Destroy', city, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger'  %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 </table>
- </header>
 
-<br>
 
-<button id="newcountry"type="button" name="button"><%= link_to 'New City', new_city_path %></button>
-<button id="newcountry"type="button" name="button"><%= link_to 'Back', countries_path %></button>
-</body>s
+
+<button><%= link_to 'New City', new_city_path, :class => 'btn btn-primary' %></button>
+<button id="newcountry"type="button" name="button"><%= link_to 'Back', countries_path, :class => 'btn btn-primary' %></button>
+
+</div>
+</header>
+</body>
