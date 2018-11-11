@@ -3,10 +3,9 @@
 
 <body>
   <h1 align= "center">Welcome to the cities page.</h1>
- <header>
-<div class="table-responsive" align="center">
-  <table class="table table-striped">
-  <table>
+  <button type="button" onclick="myFunction()">Information</button>
+  <p id="demo"></p>
+  <table class="table table-striped" id="tab">
   <thead>
     <tr>
       <th>Name</th>
@@ -21,9 +20,9 @@
     <% @cities.each do |city| %>
       <tr>
         <td><%= city.name %></td>
-        <td><%= city.population %></td><br>
-        <td><%= city.desciption %></td><br>
-        <td><%= city.country_id %></td><br>
+        <td><%= city.population %></td>
+        <td><%= city.desciption %></td>
+        <td><%= city.country_id %></td>
         <td><%= link_to 'Show', city, :class => 'btn btn-primary' %></td>
         <td><%= link_to 'Edit', edit_city_path(city), :class => 'btn btn-success'  %></td>
         <td><%= link_to 'Destroy', city, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger'  %></td>
@@ -31,13 +30,15 @@
     <% end %>
   </tbody>
 </table>
-</table>
-
-
 
 <button><%= link_to 'New City', new_city_path, :class => 'btn btn-primary' %></button>
 <button id="newcountry"type="button" name="button"><%= link_to 'Back', countries_path, :class => 'btn btn-primary' %></button>
 
-</div>
-</header>
+<script>
+function myFunction() {
+    document.getElementById("demo").innerHTML = "Welcome to the city page. This page is help travellers find information about cities in different countries. The blog can be used to learn about cities";
+
+    document.getElementById("tab").style.fontSize = "20px";
+}
+</script>
 </body>
