@@ -11,6 +11,4 @@ Database creation
 With regards to storing the information of the countries and cities, the platform used to create the database was Docker. Docker is a platform operating system level virtualisation, with Docker the creating, deploying and running of application is easier.
 
 Deployment instructions
-Deloyment of the appp was done via Github and heroku. Github was the main platform for making commits and pushing works on line
-* ...
-# ror-project-one-8-2
+Deloyment of the app was done via Github and Heroku. Github was the main platform for making commits and pushing works on line and Heroku for live server.
